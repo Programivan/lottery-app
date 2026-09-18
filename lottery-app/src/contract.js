@@ -1,10 +1,8 @@
-export const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-
 export const contractABI = [
   "constructor()",
   "function manager() view returns (address)",
-  "function players(uint256) view returns (address)",
-  "function enter() payable",
+  "function lastWinnerNickname() view returns (string)",
+  "function enter(string _nickname) payable",
   "function pickWinner()",
-  "function getPlayers() view returns (address[])"
+  "function getPlayers() view returns (tuple(address playerAddress, string nickname)[])"
 ];
